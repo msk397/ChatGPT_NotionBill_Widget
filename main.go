@@ -13,6 +13,7 @@ func main() {
 	_, err := fmt.Scanf("%s", &text)
 	if err != nil {
 		// 处理错误
+		panic(err)
 		return
 	}
 	url := "https://api.openai.com/v1/completions"
@@ -30,13 +31,13 @@ func main() {
 	}
 	data, err := json.Marshal(params)
 	if err != nil {
-		// 处理错误
+		panic(err)
 		return
 	}
 
 	req, err := http.NewRequest("POST", url, bytes.NewBuffer(data))
 	if err != nil {
-		// 处理错误
+		panic(err)
 		return
 	}
 
@@ -46,7 +47,7 @@ func main() {
 	client := &http.Client{}
 	resp, err := client.Do(req)
 	if err != nil {
-		// 处理错误
+		panic(err)
 		return
 	}
 	defer resp.Body.Close()
@@ -54,7 +55,7 @@ func main() {
 	var result map[string]interface{}
 	err = json.NewDecoder(resp.Body).Decode(&result)
 	if err != nil {
-		// 处理错误
+		panic(err)
 		return
 	}
 	Notionurl := "https://api.notion.com/v1/pages"
@@ -62,7 +63,7 @@ func main() {
 	payload := strings.NewReader(result["choices"].([]interface{})[0].(map[string]interface{})["text"].(string))
 	req, err = http.NewRequest("POST", Notionurl, payload)
 	if err != nil {
-		// 处理错误
+		panic(err)
 		return
 	}
 
@@ -73,7 +74,7 @@ func main() {
 	client = &http.Client{}
 	resp, err = client.Do(req)
 	if err != nil {
-		// 处理错误
+		panic(err)
 		return
 	}
 	defer resp.Body.Close()
@@ -81,7 +82,7 @@ func main() {
 	var res map[string]interface{}
 	err = json.NewDecoder(resp.Body).Decode(&res)
 	if err != nil {
-		// 处理错误
+		panic(err)
 		return
 	}
 	fmt.Println(res)
