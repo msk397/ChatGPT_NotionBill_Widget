@@ -814,7 +814,7 @@ class Widget extends Base {
       Keychain.set("monthCost", monthCost);
     }
     let content = w.addStack()
-    let todayText = content.addText("🍔今日消费\n"+dayCost+"块");
+    let todayText = content.addText("🍔今日消费\n"+dayCost+"元");
     content.setPadding(20, 30, 0, 30)
     todayText.font = Font.lightSystemFont(16)
     content.addSpacer()
