@@ -5,10 +5,11 @@
 // These must be at the very top of the file. Do not edit.
 // icon-color: deep-gray; icon-glyph: code-branch;
 // 
-// 「小件件」
-// 开发环境，用于小组件调用
-// https://x.im3x.cn
-// https://github.com/im3x/Scriptables
+// 开发框架「小件件」
+// 作者：马赛克
+// 日期：2023-02-24
+// 版本：1.0.1
+// 说明：Notion记账显示，显示今日消费及本月消费
 // 
 
 // 组件基础类
