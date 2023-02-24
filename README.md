@@ -9,7 +9,7 @@
 * 把Notion的机器人(需要自己去申请)加到这个database里面
 
 ## 2. 快捷指令
-* 点击[快捷指令分享网址](https://www.icloud.com/shortcuts/e6d97dd072f34937823c00823203fcd6)，下载快捷指令到手机上
+* 点击[快捷指令分享网址](https://www.icloud.com/shortcuts/521006ebdce3431d9539c4d5121c9c33)，下载快捷指令到手机上
 * 按照说明，将Notion的database_id，openAI和Notion的Key填上
 
 ## 3.Scriptable
