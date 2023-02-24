@@ -814,7 +814,7 @@ class Widget extends Base {
     }
     //加入emoji
     let content = w.addStack()
-    let t = content.addText("🍔今日消费\n"+dayCost+"块");
+    let t = content.addText("🍔今日消费\n"+dayCost+"元");
     content.setPadding(20, 30, 0, 30)
     t.font = Font.lightSystemFont(16)
     //加入熊猫emoji
