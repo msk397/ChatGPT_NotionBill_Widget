@@ -2,7 +2,8 @@
 ## 效果：
   1. 人工输入文字至快捷指令，例如“拉面15元”，快捷指令会使用openAI的api解析成notion可识别的json格式，并上传到notion中
   2. 利用该[js文件](Notion记账.js)，获取到notion中的账单内容，进行统计，以小组件的形式展现在桌面
-![效果图](https://github.com/msk397/ChatGPT_NotionBill_Widget/blob/main/lightWidget.jpg)
+![效果图1](https://github.com/msk397/ChatGPT_NotionBill_Widget/blob/main/lightWidget.jpg "浅色模式下效果")
+![效果图2](https://github.com/msk397/ChatGPT_NotionBill_Widget/blob/main/darkWidget.jpg "深色模式下效果")
 ## 1.Notion设置
 * 复制[database模板](https://msk397.notion.site/e7080a3f84e4475b92d75599c4a5abdb?v=485d7cecb2db4b25b70758d5cceca2d8)
 * 把Notion的机器人(需要自己去申请)加到这个database里面
