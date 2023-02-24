@@ -1,0 +1,2 @@
+# ChatGPT_NotionBill_Widget
+使用chatGPT获取账单信息，存储到Notion中，最后将账单信息展示在ios的Widget中
