@@ -1,6 +1,6 @@
 # ChatGPT_NotionBill_Widget
 ## 效果：
-  1. 输入文字到快捷指令，例如“拉面15元”，快捷指令会使用openAI的api解析成notion可识别的json格式，并上传到指定的notion的database中
+  1. 输入文字到快捷指令，例如“拉面15元”，快捷指令会调用openAI的api，将文字解析成notion可识别的格式，并上传到指定的database中
   2. 利用[Notion.js](Notion记账.js)，获取到notion中的账单内容，进行统计，并以小组件的形式展现在桌面
 ![浅色模式下效果图](https://github.com/msk397/ChatGPT_NotionBill_Widget/blob/main/lightWidget.jpg "浅色模式效果")
 ![浅色模式下效果图](https://github.com/msk397/ChatGPT_NotionBill_Widget/blob/main/darkWidget.jpg "深色模式效果")
