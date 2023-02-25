@@ -15,6 +15,6 @@
 * 按照快捷指令上的说明，将Notion的database_id，openAI和Notion的Key填上
 
 ## 3.Scriptable
-* 下载[Notion.js](Notion记账.js)，并把766及767行改成自己的database_id和Notion Key
+* 下载[Notion.js](Notion记账.js)，并把767及768行改成自己的database_id和Notion Key
 * 将[Notion.js](Notion记账.js)添加到Scriptable中
 * 将小组件添加到桌面
