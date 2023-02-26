@@ -904,10 +904,10 @@ class Widget extends Base {
     let day = date.getDate()
     let price = data["Price"]
     if(Keychain.get("month")==month.toString()){
-      Keychain.set("monthCost",(this.accAdd(Number(Keychain.get("monthCost")),price)).toString())
+      Keychain.set("monthCost",this.toFixed(Number(Keychain.get("monthCost"))+price,2).toString())
     }
     if(Keychain.get("day")==day.toString()){
-      Keychain.set("dayCost",(this.accAdd(Number(Keychain.get("dayCost")),price)).toString())
+      Keychain.set("dayCost",this.toFixed(Number(Keychain.get("dayCost"))+price,2).toString())
     }
   }
 
@@ -920,19 +920,25 @@ class Widget extends Base {
   }
 
 
-  /**
-   * accAdd函数，用来得到精确的加法结果
-   * @param {number} arg1
-   * @param {number} arg2
-   */
- accAdd(arg1,arg2){ 
-    var r1,r2,m;  
-    try{
-    　　r1 = arg1.toString().split(".")[1].length;
-    }catch(e){r1=0}  try{
-    　　r2 = arg2.toString().split(".")[1].length;}catch(e){r2=0}m = Math.pow(10,Math.max(r1,r2));
-    return (arg1*m+arg2*m)/m;
-}
+/*
+ * 修复firefox/chrome中toFixed兼容性问题
+ * firefox/chrome中，对于小数最后一位为5时进位不正确，
+ * 修复方式即判断最后一位为5的，改成6，再调用toFixed
+   number {原始数字}
+   precision {位数}
+ */
+   toFixed(number, precision) {
+    var str = number + ''
+    var len = str.length
+    var last = str.substring(len - 1, len)
+    if (last == '5') {
+        last = '6'
+        str = str.substring(0, len - 1) + last
+        return (str - 0).toFixed(precision)
+    } else {
+        return number.toFixed(precision)
+    }
+  }
 
 }
 
